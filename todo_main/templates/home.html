@@ -62,6 +62,9 @@
           {% for task in completed_task %}
           <div class="card m-1">
             <div class="card-body">{{task.task}}</div>
+            <a href="{% url 'mark_as_undone' task.pk %}" class="btn btn-warning"
+              ><i class="fa fa-times"></i> Undo
+            </a>
           </div>
           {% endfor %}
         </div>
